@@ -15,6 +15,9 @@ A sleek browser extension for saving and organizing your links with ease.
 - JavaScript (Vanilla)
 - Chrome Extension API
 
+## Live Demo
+https://harshanrepo.github.io/savora-link-manager/
+
 ## Installation
 1. Download or clone this repository
 2. Open Chrome/Brave and go to `chrome://extensions/`
