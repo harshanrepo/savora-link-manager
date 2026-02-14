@@ -31,4 +31,4 @@ https://harshanrepo.github.io/savora-link-manager/
 - **Delete All**: Double-click "DELETE ALL"
 
 ## Author
-Harshan M
+Shri Harshan M
