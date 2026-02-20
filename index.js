@@ -4,6 +4,9 @@ let myleads = [];
 let ulEl = document.getElementById("ul-el");
 let delEl = document.getElementById("btn-del");
 let tabEl = document.getElementById("btn-tab");
+const btn=document.getElementById("toggle")
+
+
 let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myleads"));
 
 if (leadsFromLocalStorage) {
@@ -42,3 +45,7 @@ delEl.addEventListener("dblclick", function () {
   myleads = [];
   render(myleads);
 });
+
+btn.addEventListener("click",function(){
+  document.documentElement.classList.toggle('darkmode')
+})
