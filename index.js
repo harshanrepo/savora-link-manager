@@ -15,10 +15,12 @@ if (leadsFromLocalStorage) {
 }
 function render(leads) {
   let listItems = "";
+
   for (let i = 0; i < leads.length; i++) {
     listItems += `
       <li>
-        <a href='${leads[i]}' target='_blank'>${leads[i]}</a>
+        <input type="checkbox" class="lead-checkbox" data-index="${i}">
+        <a href="${leads[i]}" target="_blank">${leads[i]}</a>
       </li>`;
   }
   ulEl.innerHTML = listItems;
@@ -38,6 +40,15 @@ tabEl.addEventListener("click", function () {
     localStorage.setItem("myleads", JSON.stringify(myleads));
     render(myleads);
   });
+});
+
+delEl.addEventListener("click", function () {
+  const checkboxes = document.querySelectorAll(".lead-checkbox");
+
+  myleads = myleads.filter((lead, index) => !checkboxes[index].checked);
+
+  localStorage.setItem("myleads", JSON.stringify(myleads));
+  render(myleads);
 });
 
 delEl.addEventListener("dblclick", function () {
